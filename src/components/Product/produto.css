@@ -1,0 +1,87 @@
+.card{
+    width: 300px;
+    height: 346px;
+    
+    background: #FFFFFF;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+figure{
+    width: 300px;
+    height: 150px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeProduto{
+    left: 0%;
+    right: 0%;
+    top: 16.67%;
+    bottom: -16.67%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+
+.categoria{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+    margin-left: 10px;
+}
+
+.preco{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -33.33%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #27AE60;
+    margin-left: 10px;
+}
+
+
+.btnComprar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+    width: 106px;
+    height: 40px;
+    left: 20px;
+    top: 133px;
+    background: #27AE60;
+    border: 2px solid #27AE60;
+    border-radius: 8px;
+    color: #E0E0E0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+.imgProduct{
+    margin-bottom: 20px;
+}
