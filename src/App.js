@@ -6,8 +6,12 @@ import ProductsList from "./components/ProductsList";
 import FilterProdutos from "./components/FilterProdutos";
 import Carrinho from "./components/Carrinho";
 import Cart from "./components/Cart/Cart";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css"
+
 
 function App() {
+  
   const [produtos, setprodutos] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -34,19 +38,23 @@ function App() {
       const handleClick = (productId) => {
         const idExiste = currentSale.find((item) => item.id === productId);
         const addItens = produtos.find((item) => item.id === productId);
-    if (addItens !== idExiste) {
-      setCurrentSale([...currentSale, addItens]);
-    }
-  };
-  
+      if (addItens !== idExiste) {
+        setCurrentSale([...currentSale, addItens]);
+       
+      } else {
+        toast.error('Produto já exite no carrinho')
+          }
+      };
   
   const RemoveProduto = (remover) => {
     const remove = currentSale.filter((item) => item !== remover);
+    toast.success('Produto removido')
     setCurrentSale(remove);
   };
 
   const RemoveTodosProdutos = (remover) => {
     const remove = currentSale.filter((item) => item === remover);
+    toast.success('Todos os produtos foram removidos')
     setCurrentSale(remove);
   };
 
@@ -81,6 +89,7 @@ function App() {
             <Carrinho />
           )}
         </aside>
+        <ToastContainer/>
       </main>
     </>
   );
